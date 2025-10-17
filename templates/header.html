@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport", content="width-device-width" initial-scale="1"/>
+    <title>Software Testing</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="/static/styles.css" rel="stylesheet">
+  </head>
+  <body>
+      <div class="container"> 
+        <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom"> 
+          <div class="col-md-3 mb-2 mb-md-0"> 
+            <a href="{{ url_for('home') }}" class="d-inline-flex link-body-emphasis text-decoration-none"> 
+              <p class="home">Test</p>
+            </a> 
+          </div> 
+          <div class="col-md-3 text-end"> 
+            {% if page == 'login' %}
+              <a type="button" class="btn btn-primary" href="{{ url_for('register') }}">Sign-up</a>
+            {% elif page == 'register' %}
+              <a type="button" class="btn btn-outline-primary me-2" href="{{ url_for('login') }}">Login</a>
+            {% elif page == 'welcome' %}
+              <a type="button" class="btn btn-outline-primary me-2" href="{{ url_for('logout') }}">Logout</a>
+            {% else %}
+              <a type="button" class="btn btn-outline-primary me-2" href="{{ url_for('login') }}">Login</a> 
+              <a type="button" class="btn btn-primary" href="{{ url_for('register') }}">Sign-up</a>
+            {% endif %}
+          </div> 
+        </header> 
+      </div>
+
