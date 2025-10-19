@@ -20,8 +20,9 @@
               <a type="button" class="btn btn-primary" href="{{ url_for('register') }}">Sign-up</a>
             {% elif page == 'register' %}
               <a type="button" class="btn btn-outline-primary me-2" href="{{ url_for('login') }}">Login</a>
-            {% elif page == 'welcome' %}
-              <a type="button" class="btn btn-outline-primary me-2" href="{{ url_for('logout') }}">Logout</a>
+            <!-- This will be an intentional bug, there is no logout button-->
+            <!-- {% elif page == 'welcome' %}
+              <a type="button" class="btn btn-outline-primary me-2" href="{{ url_for('logout') }}">Logout</a> -->
             {% else %}
               <a type="button" class="btn btn-outline-primary me-2" href="{{ url_for('login') }}">Login</a> 
               <a type="button" class="btn btn-primary" href="{{ url_for('register') }}">Sign-up</a>

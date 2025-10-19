@@ -26,7 +26,9 @@ class Users(db.Model, UserMixin):
     __tablename__ = "users"
     id: Mapped[int] = mapped_column(Integer, primary_key=True)
     username: Mapped[str] = mapped_column(String(250), unique=True, nullable=False)
-    email: Mapped[str] = mapped_column(String(250), unique=True, nullable=False)
+    # Originally, email will have a constraint of unique but we will create an intentional bug
+    # This will be a duplicate email bug
+    email: Mapped[str] = mapped_column(String(250), nullable=False)
     password: Mapped[str] = mapped_column(String(250), nullable=False)
 
 
@@ -91,10 +93,11 @@ def register():
         user_username = db.session.execute(db.select(Users).where(Users.username == username))
         existing_username = user_username.scalar()
         # This will handle all errors if credentials are not met
-        if existing_user:
-            flash ("That email already exist, please enter a new email or login instead", "danger")
-            return redirect(url_for('register'))
-        elif existing_username:
+        # This will be an intentional bug - Duplicate emails
+        # if existing_user:
+        #     flash ("That email already exist, please enter a new email or login instead", "danger")
+        #     return redirect(url_for('register'))
+        if existing_username:
             flash("Username already in use, please try another one", "danger")
             return redirect(url_for('register'))
         elif not username or not email or not password:
