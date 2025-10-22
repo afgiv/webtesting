@@ -59,4 +59,31 @@ system responsiveness, user experience, security, and performance.
 
 5. Entry and Exit Criteria
 
+Entry Criteria
+    1. Application is deployed and accessible in local environment
+    2. Database's schema and tables are initialzied
+    3. Test cases and RTM are reviewed and approved
 
+Exit Criteria
+    1. All test cases and RTM are tested and filled
+    2. All founded critical and severe bugs are fixed and retested
+    3. Test summary report is completed and approved
+
+6. Testing Environment
+    - Operating system: Windows 11
+    - Browser: Google Chrome (latest version)
+    - Framework: Flask
+    - Database: SQLite
+    - IDE/Code Editor: VS Code
+    - Testing Tools: Postman, JMeter, Excel, ScreenToGif
+
+7. Test Deliverables
+    1. Requirement Analysis Document
+    2. Requirement Traceability Matrix (RTM)
+    3. Test Plan
+    4. Test Cases Document
+    5. Test Summary Report
+    6. Evidence of Test Results
+
+8. Risks and Mitigation
+    1. 
