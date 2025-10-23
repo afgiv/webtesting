@@ -86,4 +86,35 @@ Exit Criteria
     6. Evidence of Test Results
 
 8. Risks and Mitigation
-    1. 
+
+| Risk_ID | Description                                                              | Type           | Mitigation                                                                                    |
+|---------|--------------------------------------------------------------------------|----------------|-----------------------------------------------------------------------------------------------|
+| R-001   | User credentials might not be stored in the database                     | Functional     | Verify DB records after registration; confirm API success.                                    |
+| R-002   | Application might crash or slow down during performance test             | Non-Functional | Perform load testing using JMeter or Postman. Monitor resource usage and optimize DB queries. |
+| R-003   | Invalid email format might be accepted during registration               | Functional     | Implement strict frontend and backend email validation.                                       |
+| R-004   | Test Environment or browser might not be compatible with the application | Non-Functional | Perform cross-browser and device compatability testing.                                       |
+| R-005   | Login/Register page might fail to load due to API issues                 | Non-Functional | Verify API endpoints using postman; check server status and connectivity. 
+
+9. Roles and Responsibilities
+
+| Role          | Name               | Responsibility                    |
+|---------------|--------------------|-----------------------------------|
+| Test Designer | Amadeo F. Genio IV | Prepare and review test cases     |
+| Test Executor | Amadeo F. Genio IV | Execute all planned tests         |
+| Bug Reporter  | Amadeo F. Genio IV | Log and track all identified bugs |
+
+10. Schedule
+
+| Document                       | Start Date       | End Date         |
+|--------------------------------|------------------|------------------|
+| Requirement Analysis           | October 20, 2025 | October 20, 2025 |
+| Test Plan                      | Oct. 21, 2025    | October 23, 2025 |
+| Test Cases                     | October 23, 2025 | October 24, 2025 |
+| Test Execution & Bug Reporting |                  |                  |
+| Test Summary Report            |                  |                  |
+
+11. Approval
+
+| Name               | Role        | Signature | Date |
+|--------------------|-------------|-----------|------|
+| Amadeo F. Genio IV | QA Engineer |           |      |
