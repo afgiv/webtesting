@@ -135,11 +135,11 @@ Exit Criteria
 
     1. Requirement Analysis Document
 
-    2. Requirement Traceability Matrix (RTM)
+    2. Test Plan
 
-    3. Test Plan
+    3. Test Cases Document
 
-    4. Test Cases Document
+    4. Requirement Traceability Matrix (RTM)
 
     5. Test Summary Report
 
